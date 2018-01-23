@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="556.0" prefWidth="666.0" styleClass="body" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.UpdateUploadControl">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="666.0" style="-fx-background-color: #84C7D2;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnBack" buttonType="RAISED" lineSpacing="10.0" onAction="#goBack" ripplerFill="#175668" style="-fx-background-color: #84C7D2;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Update Marks">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Text>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="40.0" prefWidth="448.0">
+               <children>
+                  <JFXTextField fx:id="search" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="32.0" prefWidth="233.0" promptText="Search student" style="-fx-background-color: #ffffff;" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefWidth="235.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="450.0" prefWidth="235.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="235.0" style="-fx-background-color: #84C7D2;">
+                     <children>
+                        <Text fill="#fafeff" strokeType="OUTSIDE" strokeWidth="0.0" text="you can update highlighted studen below" textAlignment="CENTER" wrappingWidth="213.048828125">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="45.0" prefHeight="28.0" prefWidth="235.0">
+                     <children>
+                        <JFXTextField fx:id="stuID" editable="false" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="22.0" prefWidth="233.0" promptText="studentId" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="73.0" prefHeight="51.0" prefWidth="235.0">
+                     <children>
+                        <JFXTextField fx:id="tst1" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="10.0" prefWidth="233.0" promptText="Test1" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="73.0" prefHeight="53.0" prefWidth="235.0">
+                     <children>
+                        <JFXTextField fx:id="tst2" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="10.0" prefWidth="233.0" promptText="Test2" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="269.0" prefHeight="50.0" prefWidth="235.0">
+                     <children>
+                        <JFXTextField fx:id="tst3" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="10.0" prefWidth="233.0" promptText="Test3" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="293.0" prefHeight="44.0" prefWidth="235.0">
+                     <children>
+                        <JFXTextField fx:id="tst4" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="10.0" prefWidth="233.0" promptText="Test4" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="51.0" prefWidth="235.0">
+                     <children>
+                        <JFXTextField fx:id="tst5" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="10.0" prefWidth="233.0" promptText="Test5" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="45.0" prefHeight="47.0" prefWidth="235.0">
+                     <children>
+                        <JFXTextField fx:id="mid" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="11.0" prefWidth="233.0" promptText="Mid-term" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="86.0" prefHeight="47.0" prefWidth="235.0">
+                     <children>
+                        <JFXTextField fx:id="ex" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="191.0" prefHeight="21.0" prefWidth="233.0" promptText="Exam" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="76.0" prefWidth="235.0" spacing="10.0">
+                     <children>
+                        <StackPane fx:id="stackactivate" prefHeight="44.0" prefWidth="143.0">
+                           <children>
+                              <JFXButton fx:id="btnupdate" buttonType="RAISED" onAction="#goToUpdate" prefHeight="24.0" prefWidth="122.0" style="-fx-background-color: #30c8ba;" text="Update" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow offsetX="2.0" offsetY="2.0" />
+                                 </effect>
+                              </JFXButton>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="tableview" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idcol" prefWidth="75.0" text="Student ID" />
+          <TableColumn fx:id="namecol" prefWidth="75.0" text="Full name" />
+            <TableColumn fx:id="test1" maxWidth="3000.0" prefWidth="75.0" text="Test1" />
+            <TableColumn fx:id="test2" maxWidth="3000.0" prefWidth="75.0" text="Test2" />
+            <TableColumn fx:id="test3" maxWidth="3000.0" prefWidth="75.0" text="Test3" />
+            <TableColumn fx:id="test4" maxWidth="3000.0" prefWidth="75.0" text="Test4" />
+            <TableColumn fx:id="test5" maxWidth="3000.0" prefWidth="75.0" text="Test5" />
+            <TableColumn fx:id="mazoezicol" prefWidth="75.0" text="Test average" />
+            <TableColumn fx:id="midcol" prefWidth="75.0" text="Mid-term" />
+            <TableColumn fx:id="examcol" prefWidth="75.0" text="Exam" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow />
+         </effect>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="29.0" prefWidth="666.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <effect>
+      <InnerShadow />
+   </effect>
+</BorderPane>

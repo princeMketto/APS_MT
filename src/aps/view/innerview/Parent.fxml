@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="290.0" prefWidth="262.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.innerview.ParentContr">
+   <children>
+      <HBox alignment="BOTTOM_LEFT" layoutX="-6.0" prefHeight="44.0" prefWidth="268.0" style="-fx-background-color: #84C7D2;">
+         <children>
+            <Label fx:id="fullnamelb" prefHeight="20.0" prefWidth="158.0" text="update details" textFill="#eeecec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <JFXButton fx:id="btnsave" buttonType="RAISED" layoutX="177.0" layoutY="19.0" onAction="#goSave" prefHeight="46.0" prefWidth="48.0" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@../styles.css" text="save" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Label fx:id="labelIp" layoutX="50.0" layoutY="73.0" prefHeight="17.0" prefWidth="141.0" textFill="#1ea86a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="BOTTOM_LEFT" layoutY="89.0" prefHeight="36.0" prefWidth="227.0">
+         <children>
+            <JFXTextField fx:id="parname" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="103.0" prefHeight="32.0" prefWidth="232.0" promptText="parent/guardian full name" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_LEFT" layoutY="140.0" prefHeight="36.0" prefWidth="227.0">
+         <children>
+            <JFXTextField fx:id="parphone" focusColor="#1e756b" labelFloat="true" maxWidth="233.0" minWidth="103.0" prefHeight="32.0" prefWidth="120.0" promptText="phone" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="parmail" focusColor="#1e756b" labelFloat="true" layoutX="10.0" layoutY="14.0" maxWidth="233.0" minWidth="103.0" prefHeight="32.0" prefWidth="120.0" promptText="Email" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="189.0" prefHeight="59.0" prefWidth="261.0">
+         <children>
+            <JFXTextField fx:id="addres" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="130.0" prefHeight="31.0" prefWidth="130.0" promptText="address (optional)" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="location" focusColor="#1e756b" labelFloat="true" layoutX="68.0" layoutY="33.0" maxWidth="191.0" minWidth="125.0" prefHeight="31.0" prefWidth="125.0" promptText="Location" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="-1.0" layoutY="226.0" prefHeight="59.0" prefWidth="261.0">
+         <children>
+            <JFXTextField fx:id="kazi" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="130.0" prefHeight="31.0" prefWidth="130.0" promptText="occupational" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="taifa" focusColor="#1e756b" labelFloat="true" layoutX="68.0" layoutY="33.0" maxWidth="191.0" minWidth="125.0" prefHeight="31.0" prefWidth="125.0" promptText="Nationality" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

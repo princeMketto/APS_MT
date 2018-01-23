@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="359.0" prefWidth="645.0" styleClass="body" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.LoadStudent">
+   <left>
+      <VBox prefHeight="345.0" prefWidth="35.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="345.0" prefWidth="32.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <HBox prefHeight="20.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <VBox prefHeight="123.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="645.0">
+               <children>
+                  <JFXTextField fx:id="id" focusColor="#218d7b" labelFloat="true" maxWidth="182.0" minWidth="182.0" onAction="#goSeacrh" prefHeight="32.0" prefWidth="182.0" promptText="Enter student ID here" unFocusColor="#36c3ab">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="btnsearch" buttonType="RAISED" onAction="#goSeacrh" ripplerFill="#175465" style="-fx-background-color: #a78f30;" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="91.0" prefWidth="645.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="543.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="119.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="110.0">
+                                 <children>
+                                    <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS:" wrappingWidth="90.4326171875">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="status" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="btntop1" buttonType="RAISED" onAction="#sendMess" prefHeight="22.0" prefWidth="181.0" styleClass="btnfooter" stylesheets="@styles.css" text="send SMS to student's parent">
+                           <font>
+                              <Font name="Century Gothic Bold" size="11.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btntop2" buttonType="RAISED" onAction="#sendMail" prefHeight="22.0" prefWidth="213.0" styleClass="btnfooter" stylesheets="@styles.css" text="send EMAIL to this student's Parent">
+                           <font>
+                              <Font name="Century Gothic Bold" size="11.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btntop3" buttonType="RAISED" opacity="0.0" styleClass="btnfooter" stylesheets="@styles.css" text="COPY">
+                           <font>
+                              <Font name="Century Gothic Bold" size="11.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="photo" fitHeight="100.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/pharma.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <StackPane fx:id="pop" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="319.0" prefWidth="283.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="293.0" prefWidth="248.0" spacing="10.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="28.0" prefWidth="283.0" style="-fx-background-color: #84C7D2;">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Student details">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="21.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID:       ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="showID" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name:       ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="showName" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="62.0" prefHeight="20.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:           ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="showGend" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="114.0" prefHeight="24.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth:   ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="showDob" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="166.0" prefHeight="28.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Class:   ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="showClass" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </VBox>
+                  <VBox prefHeight="175.0" prefWidth="291.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="28.0" prefWidth="283.0" style="-fx-background-color: #84C7D2;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Parent/Guardian details">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name:   ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="parName" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:       ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="parGend" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone:         ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="parPhone" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="283.0">
+                           <children>
+                              <Text fill="#1c5183" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:          ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="parMail" fill="#2879a8" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

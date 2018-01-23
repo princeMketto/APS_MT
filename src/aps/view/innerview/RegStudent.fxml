@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderJuju" prefHeight="556.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.innerview.RegstudController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="48.0" prefWidth="802.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnsubmit" buttonType="RAISED" onAction="#submitData" styleClass="butex" stylesheets="@../styles.css" text="submit information" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children></HBox>
+   </bottom>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="271.0" spacing="10.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <children>
+            <Text fill="#22616b" strokeType="OUTSIDE" strokeWidth="0.0" text="Parent/Guardian  Details">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </Text>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="BOTTOM_LEFT" prefHeight="51.0" prefWidth="261.0">
+               <children>
+                  <JFXTextField fx:id="parname" focusColor="#1e756b" labelFloat="true" maxWidth="257.0" minWidth="130.0" onMouseClicked="#setName" prefHeight="31.0" prefWidth="257.0" promptText="Full Name" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="36.0" prefWidth="261.0">
+               <children>
+                  <RadioButton fx:id="pamale" mnemonicParsing="false" prefHeight="18.0" prefWidth="105.0" text="Male" textFill="#26947c">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="pargender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="pafemale" mnemonicParsing="false" prefHeight="18.0" prefWidth="91.0" text="Female" textFill="#26947c" toggleGroup="$pargender">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="15.0" layoutY="66.0" prefHeight="59.0" prefWidth="261.0">
+               <children>
+                  <JFXTextField fx:id="paphone" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="130.0" prefHeight="31.0" prefWidth="130.0" promptText="Phone" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="pamail" focusColor="#1e756b" labelFloat="true" layoutX="68.0" layoutY="33.0" maxWidth="191.0" minWidth="125.0" prefHeight="31.0" prefWidth="125.0" promptText="Email(optional)" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="15.0" layoutY="121.0" prefHeight="59.0" prefWidth="261.0">
+               <children>
+                  <JFXTextField fx:id="addres" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="130.0" prefHeight="31.0" prefWidth="130.0" promptText="address (optional)" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="location" focusColor="#1e756b" labelFloat="true" layoutX="68.0" layoutY="33.0" maxWidth="191.0" minWidth="125.0" prefHeight="31.0" prefWidth="125.0" promptText="Location" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="kazi" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="125.0" prefHeight="31.0" prefWidth="125.0" promptText="occupation" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="taifa" focusColor="#1e756b" labelFloat="true" layoutX="50.0" layoutY="239.0" maxWidth="191.0" minWidth="125.0" prefHeight="31.0" prefWidth="125.0" promptText="nationality" unFocusColor="#30c8ba">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow />
+         </effect>
+         <top>
+            <Text fill="#22616b" strokeType="OUTSIDE" strokeWidth="0.0" text="Student personal details" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Century Gothic Bold" size="13.0" />
+               </font>
+            </Text>
+         </top>
+         <center>
+            <VBox prefHeight="109.0" prefWidth="625.0" BorderPane.alignment="CENTER">
+               <children>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="20.0" prefHeight="238.0" prefWidth="625.0" vgap="30.0">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="64.0" prefWidth="573.0">
+                           <children>
+                              <JFXTextField fx:id="stufirstname" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="191.0" prefHeight="31.0" prefWidth="191.0" promptText="First Name" unFocusColor="#30c8ba">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="stumiddlename" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="191.0" prefHeight="31.0" prefWidth="191.0" promptText="Middle Name" unFocusColor="#30c8ba">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="stulastname" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="191.0" prefHeight="31.0" prefWidth="191.0" promptText="Last Name" unFocusColor="#30c8ba">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="92.0" prefWidth="165.0">
+                           <children>
+                              <RadioButton fx:id="stumale" mnemonicParsing="false" prefHeight="18.0" prefWidth="105.0" text="Male" textFill="#26947c">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="13.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="stugender" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="stufemale" mnemonicParsing="false" prefHeight="18.0" prefWidth="91.0" text="Female" textFill="#26947c" toggleGroup="$stugender">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <JFXDatePicker fx:id="studob" editable="false" prefHeight="31.0" prefWidth="215.0" promptText="Date of Birth" />
+                        <JFXButton fx:id="btnphoto" buttonType="RAISED" onAction="#attachPoto" styleClass="butex" stylesheets="@../styles.css" text="photo" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></JFXButton>
+                        <ImageView fx:id="stuphoto" fitHeight="92.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/round%20account.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="21.0" prefWidth="625.0">
+                     <children>
+                        <HBox prefHeight="29.0" prefWidth="364.0" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="261.0" prefWidth="521.0" BorderPane.alignment="CENTER">
+         <center>
+            <VBox alignment="CENTER" prefHeight="260.0" prefWidth="244.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="24.0" prefWidth="344.0">
+                     <children>
+                        <Text fill="#22616b" strokeType="OUTSIDE" strokeWidth="0.0" text="Details from school (academic details)" wrappingWidth="243.60400390625">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="344.0">
+                     <children>
+                        <JFXTextField fx:id="StuID" focusColor="#1e756b" labelFloat="true" maxWidth="209.0" minWidth="192.0" prefHeight="31.0" prefWidth="209.0" promptText="Student ID" unFocusColor="#30c8ba">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="344.0">
+                     <children>
+                        <ChoiceBox fx:id="Stuclass" prefHeight="29.0" prefWidth="200.0" styleClass="butex" stylesheets="@../styles.css" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="64.0" prefHeight="54.0" prefWidth="344.0">
+                     <children>
+                        <JFXDatePicker fx:id="admissiondate" promptText="Admission date" />
+                     </children>
+                  </HBox>
+                  <StackPane fx:id="pop" prefHeight="37.0" prefWidth="244.0" />
+                  <AnchorPane fx:id="anchor" prefHeight="39.0" prefWidth="244.0" />
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <VBox alignment="TOP_CENTER" prefHeight="287.0" prefWidth="257.0" spacing="20.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="55.0" prefWidth="257.0" style="-fx-background-color: #4bc0c6;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="external register form">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btncleanfm" buttonType="RAISED" onAction="#browseForm" styleClass="butex" stylesheets="@../styles.css" text="generate clean form" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="257.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="btnAttach" buttonType="RAISED" onAction="#attachFile" styleClass="butex" stylesheets="@../styles.css" text="attach file" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="labfile" textFill="#1e3b9a" underline="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnUpload" buttonType="RAISED" onAction="#uploadData" styleClass="butex" stylesheets="@../styles.css" text="upload file to register data" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </right>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </center>
+</BorderPane>

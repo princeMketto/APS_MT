@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" styleClass="body" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.LoginController">
+   <top>
+      <JFXToolbar prefHeight="88.0" prefWidth="800.0" style="-fx-background-color: #84C7D2;" BorderPane.alignment="CENTER">
+         <center>
+            <Label alignment="CENTER" prefHeight="57.0" prefWidth="281.0" text="A    P     S" textAlignment="CENTER" textFill="#2938a6" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="20th Century Font Bold" size="64.0" />
+               </font>
+            </Label>
+         </center>
+         <bottom>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="521.0" text="Academic Processing System" textFill="#461f8c" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Bodoni MT Bold" size="24.0" />
+               </font>
+            </Label>
+         </bottom>
+         <effect>
+            <DropShadow />
+         </effect>
+         <left>
+            <ImageView fitHeight="87.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+         </left>
+         <right>
+            <ImageView fitHeight="74.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+         </right>
+      </JFXToolbar>
+   </top>
+   <opaqueInsets>
+      <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+   </opaqueInsets>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #84C7D2;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label text="CopyRight @2017,All Right Reserved" textFill="#461f8c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane fx:id="stackPop" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <Pane prefHeight="200.0" prefWidth="271.0" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <Pane prefHeight="200.0" prefWidth="227.0" BorderPane.alignment="CENTER" />
+               </right>
+               <bottom>
+                  <Pane prefHeight="74.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+               </bottom>
+               <center>
+                  <Pane maxHeight="300.0" maxWidth="300.0" minHeight="200.0" minWidth="200.0" prefHeight="265.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10 10 10 10;" styleClass="logpane" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+                     <opaqueInsets>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </opaqueInsets>
+                     <children>
+                        <VBox alignment="CENTER" layoutX="15.0" layoutY="12.0" prefHeight="233.0" prefWidth="277.0" spacing="8.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="107.0" text="Sign in" textFill="#185763">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <JFXTextField fx:id="usname" focusColor="#1e5741" labelFloat="true" maxWidth="243.0" minWidth="243.0" prefHeight="31.0" prefWidth="243.0" promptText="Username" unFocusColor="#51b280">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="12.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="password" focusColor="#184d3a" labelFloat="true" maxWidth="238.0" minWidth="238.0" prefHeight="31.0" prefWidth="238.0" promptText="password" unFocusColor="#56bc8e">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                              </JFXPasswordField>
+                              <Label fx:id="errorlab" textFill="#c32020">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <HBox alignment="CENTER" prefHeight="52.0" prefWidth="277.0">
+                                 <children>
+                                    <JFXButton fx:id="logbtn" buttonType="RAISED" graphicTextGap="1.0" onAction="#gologin" prefHeight="48.0" prefWidth="232.0" ripplerFill="WHITE" styleClass="butex" stylesheets="@styles.css" text="login" textFill="WHITE">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="18.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="serv" buttonType="RAISED" layoutX="261.0" layoutY="251.0" onAction="#config" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@styles.css" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton fx:id="forgot" buttonType="RAISED" layoutX="14.0" layoutY="251.0" onAction="#onForget" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@styles.css" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton fx:id="btnReq" alignment="CENTER" layoutX="74.0" layoutY="254.0" onAction="#goReq" styleClass="btnReg" stylesheets="@styles.css" text="New user? Register Now" textFill="#3173b2" underline="true">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <effect>
+                        <DropShadow height="68.44" radius="28.5325" spread="0.23" width="47.69" />
+                     </effect>
+                  </Pane>
+               </center>
+               <top>
+                  <HBox prefHeight="94.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+               </top>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

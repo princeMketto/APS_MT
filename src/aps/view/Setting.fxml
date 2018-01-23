@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.SettingController">
+   <children>
+      <HBox prefHeight="92.0" prefWidth="400.0" style="-fx-background-color: #84C7D2;">
+         <children>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="116.0" prefWidth="183.0" spacing="15.0" styleClass="userinfo" stylesheets="@../../../../PMS/src/pams/view/styles.css">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="79.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" />
+                  <HBox prefHeight="22.0" prefWidth="145.0" spacing="15.0">
+                     <children>
+                        <JFXButton fx:id="attach" onAction="#openFile" prefHeight="25.0" prefWidth="103.0" styleClass="btnSc" stylesheets="@styles.css" text="attach logo">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnsave" layoutX="10.0" layoutY="10.0" onAction="#save" prefHeight="25.0" prefWidth="73.0" styleClass="btnSc" stylesheets="@styles.css" text="save">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <JFXButton fx:id="savebtn" buttonType="RAISED" layoutX="311.0" layoutY="82.0" onAction="#fill" prefHeight="51.0" prefWidth="49.0" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@../../../../PMS/src/pams/view/styles.css" text="save" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXTextField focusColor="#136c80" labelFloat="true" layoutX="98.0" layoutY="165.0" maxWidth="210.0" minWidth="166.0" prefHeight="31.0" prefWidth="210.0" promptText="School number. eg S123/0/1" unFocusColor="#1fbdbf" fx:id="xculnum">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="#136c80" labelFloat="true" layoutX="95.0" layoutY="205.0" maxWidth="210.0" minWidth="166.0" prefHeight="31.0" prefWidth="210.0" promptText="School name" unFocusColor="#1fbdbf" fx:id="xculnam">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="sculaddres" focusColor="#136c80" labelFloat="true" layoutX="95.0" layoutY="248.0" maxWidth="210.0" minWidth="166.0" prefHeight="31.0" prefWidth="210.0" promptText="School address" unFocusColor="#1fbdbf">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="#136c80" labelFloat="true" layoutX="92.0" layoutY="370.0" maxWidth="210.0" minWidth="166.0" prefHeight="31.0" prefWidth="210.0" promptText="School contact1" unFocusColor="#1fbdbf" fx:id="xculcont1">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="#136c80" labelFloat="true" layoutX="93.0" layoutY="411.0" maxWidth="210.0" minWidth="166.0" prefHeight="31.0" prefWidth="210.0" promptText="Schoolcontact2(or website)" unFocusColor="#1fbdbf" fx:id="xculcont2">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="#136c80" labelFloat="true" layoutX="90.0" layoutY="453.0" maxWidth="210.0" minWidth="166.0" prefHeight="31.0" prefWidth="210.0" promptText="School location" unFocusColor="#1fbdbf" fx:id="xcullocation">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="helpbtn" buttonType="RAISED" layoutX="333.0" layoutY="460.0" onAction="#hint" prefHeight="41.0" prefWidth="43.0" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@../../../../PMS/src/pams/view/styles.css" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXTextField fx:id="sculmail" focusColor="#136c80" labelFloat="true" layoutX="100.0" layoutY="289.0" maxWidth="210.0" minWidth="166.0" onKeyPressed="#showPass" prefHeight="31.0" prefWidth="210.0" promptText="School Email" unFocusColor="#1fbdbf">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" focusColor="#136c80" labelFloat="true" layoutX="100.0" layoutY="330.0" maxWidth="210.0" minWidth="210.0" prefHeight="31.0" prefWidth="210.0" promptText="Email's password" unFocusColor="#1fbdbf">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

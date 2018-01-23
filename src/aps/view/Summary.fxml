@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="682.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.SummaryContr">
+   <children>
+      <VBox prefHeight="559.0" prefWidth="682.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="682.0" style="-fx-background-color: #84C7D2;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="140.0" spacing="15.0" styleClass="userinfo" stylesheets="@styles.css">
+                     <children>
+                        <Text fill="#f5f0e2" strokeType="OUTSIDE" strokeWidth="0.0" text="result summary" textAlignment="CENTER">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="451.0" spacing="10.0">
+                     <children>
+                        <ChoiceBox fx:id="classchoice" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #19aecc;" />
+                        <ChoiceBox fx:id="yearchoice" layoutX="163.0" layoutY="38.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #19aecc;" />
+                        <VBox prefHeight="53.0" prefWidth="133.0" spacing="10.0">
+                           <children>
+                              <RadioButton fx:id="terminal" mnemonicParsing="false" prefHeight="18.0" prefWidth="105.0" text="Terminal" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="13.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="examtype" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="annual" mnemonicParsing="false" prefHeight="18.0" prefWidth="91.0" text="Annual" textFill="WHITE" toggleGroup="$examtype">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="234.0" prefWidth="682.0">
+               <children>
+                  <AreaChart fx:id="graph1" prefHeight="258.0" prefWidth="624.0" title="Area Graph">
+                    <xAxis>
+                      <CategoryAxis animated="false" endMargin="0.0" label="DIVISION/GRADES" startMargin="0.0" tickLabelFill="#225e97" tickLabelRotation="-37.0">
+                           <tickLabelFont>
+                              <Font size="14.0" />
+                           </tickLabelFont></CategoryAxis>
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Total" side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="97.0" prefHeight="9.0" prefWidth="682.0">
+               <children>
+                  <Text fx:id="summarylab" fill="#2940cf" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="97.0" prefHeight="285.0" prefWidth="682.0">
+               <children>
+                  <PieChart fx:id="piegraph" startAngle="90.0" title="Chart Graph">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </PieChart>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="goBtn" buttonType="RAISED" layoutX="599.0" layoutY="26.0" onAction="#fill" prefHeight="39.0" prefWidth="41.0" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@styles.css" text="Go" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="hintbtn" buttonType="RAISED" layoutX="606.0" layoutY="521.0" onAction="#showHint" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@styles.css" text="?" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Separator layoutX="4.0" layoutY="291.0" prefHeight="0.0" prefWidth="669.0" />
+   </children>
+</AnchorPane>

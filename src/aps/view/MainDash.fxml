@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXPopup?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderpane" style="-fx-background-color: f2fffc;" styleClass="body" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.MainDashController">
+   <top>
+      <JFXToolbar prefHeight="39.0" prefWidth="800.0" style="-fx-background-color: #84C7D2;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <left>
+            <HBox prefHeight="39.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXHamburger fx:id="ham" styleClass="jfx-hamburger" stylesheets="@styles.css" />
+                  <Label prefHeight="68.0" prefWidth="53.0" text="APS" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="42.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="403.0" spacing="7.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="263.0">
+                     <children>
+                        <Label fx:id="unam" alignment="CENTER_RIGHT" maxWidth="214.0" prefHeight="17.0" prefWidth="195.0" text="MWAKANYAMALE" textFill="#101857">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="69.0">
+                     <children>
+                        <ImageView fx:id="logOffPi" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/off2.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="logOffLab" text="Logout" textFill="#68165e">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <StackPane fx:id="poproot" prefHeight="42.0" prefWidth="37.0">
+                     <children>
+                        <JFXRippler />
+                        <JFXButton id="btnsetting" fx:id="setting" graphicTextGap="0.0" prefHeight="40.0" prefWidth="37.0" ripplerFill="#1a6349" style="-fx-background-image: url('\images\settings.png'); -fx-background-color: #84C7D2;" />
+                        <JFXPopup fx:id="popup" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </right>
+         <bottom>
+            <StackPane fx:id="stackMain" prefHeight="7.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </JFXToolbar>
+   </top>
+   <left>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" maxWidth="200.0" prefHeight="556.0" prefWidth="3.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="28.0" prefWidth="800.0" style="-fx-background-color: #84C7D2;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label text="CopyRight 2017 © All Right Reserved" textFill="#461f8c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane fx:id="stackbase" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="borderpaneInner" prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <VBox prefHeight="330.0" prefWidth="30.0" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <VBox prefHeight="330.0" prefWidth="29.0" BorderPane.alignment="CENTER" />
+               </right>
+               <top>
+                  <BorderPane prefHeight="273.0" prefWidth="797.0" BorderPane.alignment="CENTER">
+                     <right>
+                        <Pane prefHeight="200.0" prefWidth="268.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                           <effect>
+                              <DropShadow height="29.9" radius="15.19" spread="0.05" width="32.86" />
+                           </effect>
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                           <children>
+                              <VBox alignment="CENTER" layoutX="-2.0" layoutY="63.0" prefHeight="185.0" prefWidth="270.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton fx:id="btnmyprofile" onAction="#goProfile" prefHeight="29.0" prefWidth="265.0" styleClass="btnDash" stylesheets="@styles.css" text="My Profile">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <StackPane fx:id="stackHead" prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton fx:id="btnHead" onAction="#goHead" prefHeight="29.0" prefWidth="264.0" styleClass="btnDash" stylesheets="@styles.css" text="Head of school">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </StackPane>
+                                    <JFXButton fx:id="btnfaq" onAction="#goFaq" prefHeight="29.0" prefWidth="261.0" styleClass="btnDash" stylesheets="@styles.css" text="FAQ">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btnupdates" layoutX="10.0" layoutY="115.0" onAction="#goViews" prefHeight="29.0" prefWidth="262.0" styleClass="btnDash" stylesheets="@styles.css" text="updates">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btnabout" onAction="#goAbout" prefHeight="29.0" prefWidth="260.0" styleClass="btnDash" stylesheets="@styles.css" text="About APS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="43.0" prefWidth="268.0" style="-fx-background-color: #84C7D2;">
+                                 <children>
+                                    <Text fill="#f8f1f1" strokeType="OUTSIDE" strokeWidth="0.0" text="smart menu">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="btnhelp" buttonType="RAISED" layoutX="226.0" layoutY="28.0" onAction="#goHelp" prefHeight="29.0" prefWidth="32.0" styleClass="btnfooter" text="?">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                     </right>
+                     <center>
+                        <GridPane hgap="20.0" prefHeight="289.0" prefWidth="509.0" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <BorderPane prefHeight="259.0" prefWidth="489.0" style="-fx-background-color: #ffffff;">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <effect>
+                                    <DropShadow height="29.9" radius="15.932499999999997" spread="0.15" width="35.83" />
+                                 </effect>
+                                 <center>
+                                    <BarChart fx:id="barchart" prefHeight="254.0" prefWidth="350.0" style="-fx-background-color: #ffffff;" title="STUDENTS COUNTER" BorderPane.alignment="CENTER">
+                                      <xAxis>
+                                        <CategoryAxis animated="false" label="Classes" prefHeight="19.0" prefWidth="432.0" side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis label="Number of Students" side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="18.0" prefWidth="489.0" spacing="10.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                                 <right>
+                                    <VBox prefHeight="212.0" prefWidth="139.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="139.0">
+                                             <children>
+                                                <Label fx:id="gdata" alignment="CENTER" textFill="#17a13c">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <JFXButton fx:id="btntool12" buttonType="RAISED" onAction="#goComp" prefHeight="29.0" prefWidth="154.0" styleClass="btnfooter" text="result comparator graph">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btntool11" buttonType="RAISED" onAction="#goSumm" prefHeight="29.0" prefWidth="169.0" styleClass="btnfooter" text="summary result graph">
+                                             <font>
+                                                <Font name="System Bold" size="11.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btntool1" buttonType="RAISED" onAction="#goPosi" prefHeight="29.0" prefWidth="154.0" styleClass="btnfooter" text="student position table">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <VBox alignment="BOTTOM_LEFT" prefHeight="53.0" prefWidth="139.0">
+                                             <children>
+                                                <HBox prefHeight="29.0" prefWidth="139.0">
+                                                   <children>
+                                                      <JFXButton fx:id="btnrelod" onAction="#ReloadGraph" prefHeight="25.0" prefWidth="26.0" styleClass="btnDash" stylesheets="@styles.css" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets right="8.0" />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                     </center>
+                  </BorderPane>
+               </top>
+               <center>
+                  <StackPane fx:id="stackPop" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane alignment="CENTER">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXButton fx:id="btngeneratereport" buttonType="RAISED" contentDisplay="TOP" onAction="#goReport" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="Generate report">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btnregi" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="19.0" onAction="#goRegister" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="Registration" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btnupdate" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="19.0" onAction="#goUpdate" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="update data" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btnstudentinfo" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="113.0" onAction="#goInformation" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="student information" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btntimetable" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="19.0" onAction="#goTimeTable" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="timetable" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btnprintdata" buttonType="RAISED" contentDisplay="TOP" layoutX="256.0" layoutY="113.0" onAction="#goPrint" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="print data" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btnsettings" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="113.0" onAction="#goSetting" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="settings" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btnlogs" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="19.0" onAction="#goSyslogScene" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="system logs" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btnuploadresult" buttonType="RAISED" contentDisplay="TOP" onAction="#goUpload" prefHeight="78.0" prefWidth="235.0" styleClass="btnDash" stylesheets="@styles.css" text="upload result" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="40.28" radius="19.64" spread="0.28" width="40.28" />
+                                 </effect>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

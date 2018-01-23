@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="556.0" prefWidth="666.0" styleClass="body" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.innerview.RegSubClass">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <HBox alignment="CENTER" prefHeight="404.0" prefWidth="666.0" spacing="70.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="356.0" prefWidth="202.0" spacing="10.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text fill="#14503f" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Subject here">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator prefWidth="200.0" />
+                  <JFXTextField fx:id="subcode" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="191.0" prefHeight="31.0" prefWidth="191.0" promptText="Subject code" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="subname" focusColor="#1e756b" labelFloat="true" layoutX="14.0" layoutY="51.0" maxWidth="191.0" minWidth="191.0" prefHeight="31.0" prefWidth="191.0" promptText="Subject name" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <ChoiceBox fx:id="subcategory" prefHeight="29.0" prefWidth="191.0" styleClass="butex" stylesheets="@../styles.css" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="101.13671875" />
+                  <Separator prefWidth="200.0" />
+                  <JFXButton fx:id="btnsubject" buttonType="RAISED" onAction="#goSubject" styleClass="butex" stylesheets="@../styles.css" text="save subject" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="356.0" prefWidth="220.0" spacing="10.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text fill="#14503f" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Class here">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator prefWidth="200.0" />
+                  <ChoiceBox fx:id="classname" layoutX="23.0" layoutY="93.0" prefHeight="29.0" prefWidth="191.0" styleClass="butex" stylesheets="@../styles.css" />
+                  <JFXTextField focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="191.0" opacity="0.13" prefHeight="31.0" prefWidth="191.0" promptText="Class name eg. Form I" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <ChoiceBox fx:id="classtream" prefHeight="29.0" prefWidth="191.0" styleClass="butex" stylesheets="@../styles.css" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.13671875" />
+                  <Separator prefWidth="200.0" />
+                  <JFXButton fx:id="btnclass" buttonType="RAISED" onAction="#goClass" styleClass="butex" stylesheets="@../styles.css" text="save class" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="301.0" layoutY="10.0" prefHeight="297.0" prefWidth="191.0" spacing="10.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text fill="#14503f" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Combination">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator prefWidth="200.0" />
+                  <JFXTextField fx:id="combname" focusColor="#1e756b" labelFloat="true" maxWidth="191.0" minWidth="191.0" prefHeight="31.0" prefWidth="191.0" promptText="comb. name eg. PCM" unFocusColor="#30c8ba">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <Text fill="#6f60bf" strokeType="OUTSIDE" strokeWidth="0.0" text="*Enter only 3 initials for the combination. example EGM,PCB etc" textAlignment="CENTER" wrappingWidth="187.95703125">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.13671875" />
+                  <Separator prefWidth="200.0" />
+                  <JFXButton fx:id="btncomb" buttonType="RAISED" onAction="#goComb" styleClass="butex" stylesheets="@../styles.css" text="save combination" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

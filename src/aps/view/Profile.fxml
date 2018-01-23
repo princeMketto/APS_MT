@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aps.view.ProfileController">
+   <children>
+      <VBox prefHeight="555.0" prefWidth="524.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <HBox prefHeight="134.0" prefWidth="314.0" style="-fx-background-color: #84C7D2;">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="134.0" prefWidth="290.0" spacing="15.0" styleClass="userinfo" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fx:id="myphoto" fitHeight="79.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/round%20account.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="fullnamelb" prefHeight="17.0" prefWidth="278.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="347.0" prefWidth="314.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="347.0" prefWidth="240.0" spacing="15.0" styleClass="userinfo" stylesheets="@styles.css">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <Separator prefWidth="200.0" />
+                        <JFXTextField fx:id="lbfname" focusColor="#217275" labelFloat="true" layoutX="10.0" layoutY="216.0" promptText="Registered first name" unFocusColor="#238668">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="lblname" focusColor="#217275" labelFloat="true" layoutX="10.0" layoutY="251.0" promptText="Registered lastname" unFocusColor="#238668">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="lbmail" focusColor="#217275" labelFloat="true" layoutX="10.0" layoutY="286.0" promptText="Registered Email" unFocusColor="#238668">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="lbphone" focusColor="#217275" labelFloat="true" layoutX="10.0" layoutY="321.0" promptText="Registered phone" unFocusColor="#238668">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnphoto" buttonType="RAISED" layoutX="76.0" layoutY="246.0" onAction="#attachPhoto" prefHeight="12.0" prefWidth="109.0" ripplerFill="#175668" style="-fx-background-color: #30c8ba;" text="upload photo" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <Separator prefWidth="200.0" />
+                        <JFXButton fx:id="btninfo" buttonType="RAISED" onAction="#detailsInfo" prefHeight="12.0" prefWidth="109.0" ripplerFill="#175668" style="-fx-background-color: #30c8ba;" text="update details" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <VBox prefHeight="347.0" prefWidth="239.0" spacing="10.0">
+                     <children>
+                        <Text fill="#0d5175" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Login credentials" wrappingWidth="150.13671875">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <Separator prefHeight="4.0" prefWidth="242.0" />
+                        <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="255.0">
+                           <children>
+                              <JFXTextField fx:id="lbusername" focusColor="#217275" labelFloat="true" maxWidth="200.0" minWidth="137.0" prefHeight="36.0" prefWidth="176.0" promptText="Registered username" unFocusColor="#238668">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                        <Text fill="#0d5175" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Your Password" wrappingWidth="200.13671875">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <JFXPasswordField fx:id="lboldpass" focusColor="#217275" labelFloat="true" maxWidth="189.0" minWidth="189.0" prefHeight="31.0" prefWidth="189.0" promptText="Enter old password" unFocusColor="#238668">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXPasswordField fx:id="lbnewpass" focusColor="#217275" labelFloat="true" layoutX="10.0" layoutY="185.0" maxWidth="189.0" minWidth="189.0" prefHeight="31.0" prefWidth="189.0" promptText="Enter new password" unFocusColor="#238668">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXPasswordField fx:id="lbconfirm" focusColor="#217275" labelFloat="true" layoutX="10.0" layoutY="230.0" maxWidth="189.0" minWidth="189.0" prefHeight="31.0" prefWidth="189.0" promptText="Confirm new password" unFocusColor="#238668">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXTextField fx:id="recover" focusColor="#217275" labelFloat="true" maxWidth="200.0" minWidth="137.0" prefHeight="36.0" prefWidth="176.0" promptText="Recover word" unFocusColor="#238668">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnPass" buttonType="RAISED" onAction="#updatePassword" prefHeight="12.0" prefWidth="109.0" ripplerFill="#175668" style="-fx-background-color: #30c8ba;" text="Change password" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="save" buttonType="RAISED" layoutX="436.0" layoutY="103.0" onAction="#fill" prefHeight="48.0" prefWidth="52.0" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@styles.css" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="whatbtn" buttonType="RAISED" layoutX="463.0" layoutY="496.0" onAction="#goHint" prefHeight="35.0" prefWidth="34.0" style="-fx-background-color: #19aecc;" styleClass="btnround" stylesheets="@styles.css" text="!" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>
